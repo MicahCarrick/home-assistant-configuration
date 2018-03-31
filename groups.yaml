@@ -5,6 +5,8 @@ default_view:
   entities:
     - binary_sensor.bedroom_occupancy
     - binary_sensor.kitchen_occupancy
+    - media_player.tv_room
+    - media_player.bedroom_tv
     - group.kitchen
     - group.bedroom
     - group.dining_room
@@ -14,13 +16,11 @@ kitchen:
   entities:
     - light.kitchen_light
     - light.sink_light
-    - sensor.kitchen_sensor_temperature
     - vacuum.rosie
 bedroom:
   name: Bedroom
   icon: mdi:bed-empty
   entities:
-    - sensor.bedroom_sensor_temperature
 dining_room:
   name: "Dining Room"
   entities:
@@ -34,6 +34,10 @@ climate:
   name: Climate
   icon: mdi:cloud
   entities:
+    - sensor.downstairs_temperature
+    - sensor.kitchen_temperature
+    - sensor.bedroom_temperature
+    - sensor.downstairs_humidity
     - history_graph.temperature
     - history_graph.humidity
     - climate.downstairs

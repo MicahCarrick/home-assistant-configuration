@@ -9,7 +9,19 @@ binary_sensor.bedroom_occupancy:
   friendly_name: Bedroom
 
 binary_sensor.kitchen_occupancy:
-  friendly_name: kitchen
+  friendly_name: Kitchen
+
+sensor.kitchen_temperature:
+  friendly_name: Kitchen
+
+sensor.bedroom_temperature:
+  friendly_name: Bedroom
+
+sensor.downstairs_temperature:
+  friendly_name: Downstairs
+
+sensor.downstairs_humidity:
+  friendly_name: Humidity
 
 sensor.entertainment_center_energy_today:
   icon: mdi:television
