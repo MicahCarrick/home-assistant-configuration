@@ -1,0 +1,121 @@
+homeassistant:
+  name: "Casa de Carrick"
+  latitude: 45.5886
+  longitude: -122.7064
+  elevation: 25   # I think I have vertigo...
+  unit_system: imperial
+  time_zone: America/Los_Angeles
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  # Using PositiveSSL certificate from Namecheap.com generated with
+  # openssl req -new -newkey rsa:2048 -nodes -keyout key.pem -out cert.csr
+  ssl_key: /home/homeassistant/.homeassistant/key.pem
+  ssl_certificate: /home/homeassistant/.homeassistant/casadecarrick_com.crt
+
+mqtt:
+  # Mosquitto MQTT broker running on local Pi
+  broker: 192.168.86.100
+  port: 1883
+  client_id: homeassistant-34T6we21
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+
+namecheapdns:
+  # Namecheap dynamic DNS setup as described at
+  # https://www.namecheap.com/support/knowledgebase/article.aspx/43/11/how-do-i-set-up-a-host-for-dynamic-dns
+  domain: !secret namecheap_domain
+  password: !secret namecheap_dns_password
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+# map:
+
+# Track the sun
+sun:
+
+# Cloud
+cloud:
+  # The Cloud integration provides a simple way of interfacing with Amazon
+  # SmartHome API and HA. Much more convenient than setting up all those Lamda
+  # functions manually!
+  alexa:
+    filter:
+      exclude_entities:
+        - group.kitchen
+        - group.bedroom
+        - group.dining_room
+    entity_config:
+      # Explicitly naming entities (eg. "kitchen" instead of "kitchen
+      # temperature" for the ecobee sensor) are providing a more natural dialog
+      # interacting with the Echo. It also helps avoid the "multiple devices
+      # have that name" error and repeating sensor function in the name of the
+      # sensor. For example: "The kitchen temperature temperature is 72."
+      sensor.kitchen_temperature:
+        name: "Kitchen"           # Alexa, what is the kitchen temperature?
+      light.kitchen_light:
+        name: "Kitchen Light"     # Alexa, turn on the kitchen light.
+      light.sink_light:
+        name: "Sink Light"        # Alexa, turn on the sink light.
+      sensor.bedroom_temperature:
+        name: "Bedroom"           # Alexa, what is the bedroom temperature?
+
+light:
+    # DW15S-1BZ switches and DW6HD-1BZ dimmers are auto-discovered
+  - platform: decora_wifi
+    username: !secret leviton_username
+    password: !secret leviton_password
+
+vacuum:
+  - platform: roomba
+    name: Rosie  # Yes, it's from The Jetson's
+    host: 192.168.86.66
+    username: 3108871C80224640
+    password: !secret roomba_password
+    certificate: /etc/ssl/certs/ca-certificates.crt
+    # Attempts to connect to the Roomba with these credentials from other
+    # devices will fail because this is connected "continuously"
+    continuous: true
+
+ecobee:
+  # ecobee3 with 2 extra room sensors
+  api_key: !secret ecobee_api_key
+
+media_player:
+  - platform: cast
+
+ifttt:
+  key: !secret ifttt_key
+
+history_graph: !include history_graphs.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+switch: !include switches.yaml
+binary_sensor: !include binary_sensors.yaml
+sensor: !include sensors.yaml

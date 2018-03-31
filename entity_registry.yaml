@@ -1,0 +1,8 @@
+media_player.tv_room:
+  name:
+  platform: cast
+  unique_id: 7e237be0-ec63-7351-a493-3151adce3f71
+media_player.bedroom_tv:
+  name:
+  platform: cast
+  unique_id: 695c3887-6388-23eb-4657-eae65a13e0fe

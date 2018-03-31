@@ -1,0 +1,69 @@
+default_view:
+  view: yes
+  name: Home
+  icon: mdi:home
+  entities:
+    - binary_sensor.bedroom_occupancy
+    - binary_sensor.kitchen_occupancy
+    - group.kitchen
+    - group.bedroom
+    - group.dining_room
+    - group.entertainment_room
+kitchen:
+  name: Kitchen
+  entities:
+    - light.kitchen_light
+    - light.sink_light
+    - sensor.kitchen_sensor_temperature
+    - vacuum.rosie
+bedroom:
+  name: Bedroom
+  icon: mdi:bed-empty
+  entities:
+    - sensor.bedroom_sensor_temperature
+dining_room:
+  name: "Dining Room"
+  entities:
+entertainment_room:
+  name: "Entertainment Room"
+  entities:
+    - switch.entertainment_center
+    - switch.game_console
+climate:
+  view: yes
+  name: Climate
+  icon: mdi:cloud
+  entities:
+    - history_graph.temperature
+    - history_graph.humidity
+    - climate.downstairs
+    - weather.downstairs
+energy_usage_today:
+  name: "Today's Usage"
+  entities:
+    - sensor.entertainment_center_energy_today
+    - sensor.game_console_energy_today
+
+energy_usage_yesterday:
+  name: "Yesterday's Usage"
+  entities:
+    - sensor.entertainment_center_energy_yesterday
+    - sensor.game_console_energy_yesterday
+
+energy_usage_total:
+  name: "Total Usage"
+  entities:
+    - sensor.entertainment_center_energy_total
+    - sensor.game_console_energy_total
+
+energy:
+  view: yes
+  name: Energy
+  icon: mdi:power-plug
+  entities:
+    - sensor.entertainment_center_power
+    - sensor.game_console_power
+    - group.energy_usage_today
+    - group.energy_usage_yesterday
+    - group.energy_usage_total
+    - history_graph.power

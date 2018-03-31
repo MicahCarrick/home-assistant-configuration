@@ -1,0 +1,24 @@
+# Sanoff S31 energy monitroing switches flashed with Sanoff-Tasmota firmware
+# https://github.com/arendst/Sonoff-Tasmota
+- platform: mqtt
+  name: Entertainment Center
+  command_topic: "cmnd/Entertainment_Center_Socket/POWER"
+  state_topic: "stat/Entertainment_Center_Socket/POWER"
+  availability_topic: "tele/Entertainment_Center_Socket/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+- platform: mqtt
+  name: Game Console
+  command_topic: "cmnd/Gaming_And_Media_PC_Socket/POWER"
+  state_topic: "stat/Gaming_And_Media_PC_Socket/POWER"
+  availability_topic: "tele/Gaming_And_Media_PC_Socket/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true

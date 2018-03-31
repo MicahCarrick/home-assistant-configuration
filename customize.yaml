@@ -1,0 +1,33 @@
+climate.downstairs:
+  friendly_name: Downstairs Thermostat
+
+# Weather from EcoBee
+weather.downstairs:
+  friendly_name: Overlook
+
+binary_sensor.bedroom_occupancy:
+  friendly_name: Bedroom
+
+binary_sensor.kitchen_occupancy:
+  friendly_name: kitchen
+
+sensor.entertainment_center_energy_today:
+  icon: mdi:television
+
+sensor.entertainment_center_energy_yesterday:
+  icon: mdi:television
+
+sensor.entertainment_center_energy_total:
+  icon: mdi:television
+
+sensor.game_console_energy_today:
+  icon: mdi:playstation
+
+sensor.game_console_energy_yesterday:
+  icon: mdi:playstation
+
+sensor.game_console_energy_total:
+  icon: mdi:playstation
+
+#switch.entertainment_center:
+#  icon: mdi:power-socket-us

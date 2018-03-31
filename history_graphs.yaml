@@ -1,0 +1,21 @@
+temperature_graph:
+  name: Temperature
+  entities:
+    - sensor.downstairs_temperature
+    - sensor.bedroom_temperature
+    - sensor.kitchen_temperature
+  hours_to_show: 72
+  refresh: 3600
+humidity_graph:
+  name: Humidity
+  entities:
+    - sensor.downstairs_humidity
+  hours_to_show: 72
+  refresh: 3600
+power_graph:
+  name: Power
+  entities:
+    - sensor.entertainment_center_power
+    - sensor.game_console_power
+  hours_to_show: 72
+  refresh: 60
