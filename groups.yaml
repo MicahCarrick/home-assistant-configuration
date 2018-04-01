@@ -8,19 +8,23 @@ default_view:
     - media_player.tv_room
     - media_player.bedroom_tv
     - group.kitchen
-    - group.bedroom
     - group.dining_room
     - group.entertainment_room
+    - group.bedroom
+    - group.office
+    - group.basement
 kitchen:
   name: Kitchen
   entities:
     - light.kitchen_light
     - light.sink_light
+    - switch.washing_machine
     - vacuum.rosie
 bedroom:
   name: Bedroom
   icon: mdi:bed-empty
   entities:
+    - switch.bedroom_tv
 dining_room:
   name: "Dining Room"
   entities:
@@ -29,6 +33,14 @@ entertainment_room:
   entities:
     - switch.entertainment_center
     - switch.game_console
+office:
+  name: "Office"
+  entities:
+    - switch.office_power_strip
+office:
+  name: "Basement"
+  entities:
+    - switch.furnace
 climate:
   view: yes
   name: Climate
@@ -47,19 +59,28 @@ energy_usage_today:
   entities:
     - sensor.entertainment_center_energy_today
     - sensor.game_console_energy_today
-
+    - sensor.office_energy_today
+    - sensor.bedroom_tv_energy_today
+    - sensor.washing_machine_energy_today
+    - sensor.furnace_energy_today
 energy_usage_yesterday:
   name: "Yesterday's Usage"
   entities:
     - sensor.entertainment_center_energy_yesterday
     - sensor.game_console_energy_yesterday
-
+    - sensor.office_energy_yesterday
+    - sensor.bedroom_tv_energy_yesterday
+    - sensor.washing_machine_energy_yesterday
+    - sensor.furnace_energy_yesterday
 energy_usage_total:
   name: "Total Usage"
   entities:
     - sensor.entertainment_center_energy_total
     - sensor.game_console_energy_total
-
+    - sensor.office_energy_total
+    - sensor.bedroom_tv_energy_total
+    - sensor.washing_machine_energy_total
+    - sensor.furnace_energy_total
 energy:
   view: yes
   name: Energy
@@ -67,6 +88,10 @@ energy:
   entities:
     - sensor.entertainment_center_power
     - sensor.game_console_power
+    - sensor.office_power
+    - sensor.bedroom_tv_power
+    - sensor.washing_machine_power
+    - sensor.furnace_power
     - group.energy_usage_today
     - group.energy_usage_yesterday
     - group.energy_usage_total

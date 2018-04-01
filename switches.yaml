@@ -22,3 +22,47 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: true
+- platform: mqtt
+  name: Office Power Strip
+  command_topic: "cmnd/Office_Power_Strip/POWER"
+  state_topic: "stat/Office_Power_Strip/POWER"
+  availability_topic: "tele/Office_Power_Strip/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+- platform: mqtt
+  name: Bedroom TV
+  command_topic: "cmnd/Bedroom_TV/POWER"
+  state_topic: "stat/Bedroom_TV/POWER"
+  availability_topic: "tele/Bedroom_TV/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+- platform: mqtt
+  name: Washing Machine
+  command_topic: "cmnd/Washing_Machine/POWER"
+  state_topic: "stat/Washing_Machine/POWER"
+  availability_topic: "tele/Washing_Machine/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+- platform: mqtt
+  name: Furnace
+  command_topic: "cmnd/Furnace/POWER"
+  state_topic: "stat/Furnace/POWER"
+  availability_topic: "tele/Furnace/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true

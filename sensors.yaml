@@ -60,3 +60,127 @@
   state_topic: "tele/Gaming_And_Media_PC_Socket/SENSOR"
   value_template: "{{ value_json['ENERGY'].Total }}"
   unit_of_measurement: "kWh"
+# Sonoff S31 socket with Office power strip
+- platform: mqtt
+  name: Office Voltage
+  state_topic: "tele/Office_Power_Strip/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: "V"
+- platform: mqtt
+  name: Office Current
+  state_topic: "tele/Office_Power_Strip/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current }}"
+  unit_of_measurement: "A"
+- platform: mqtt
+  name: Office Power
+  state_topic: "tele/Office_Power_Strip/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: Office Energy Today
+  state_topic: "tele/Office_Power_Strip/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Office Energy Yesterday
+  state_topic: "tele/Office_Power_Strip/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Office Energy Total
+  state_topic: "tele/Office_Power_Strip/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: "kWh"
+# Sonoff S31 socket with TV, cable box, and Roku
+- platform: mqtt
+  name: Bedroom TV Voltage
+  state_topic: "tele/Bedroom_TV/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: "V"
+- platform: mqtt
+  name: Bedroom TV Current
+  state_topic: "tele/Bedroom_TV/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current }}"
+  unit_of_measurement: "A"
+- platform: mqtt
+  name: Bedroom TV Power
+  state_topic: "tele/Bedroom_TV/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: Bedroom TV Energy Today
+  state_topic: "tele/Bedroom_TV/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Bedroom TV Energy Yesterday
+  state_topic: "tele/Bedroom_TV/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Bedroom TV Energy Total
+  state_topic: "tele/Bedroom_TV/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: "kWh"
+# Sonoff S31 washing machine.
+- platform: mqtt
+  name: Washing Machine Voltage
+  state_topic: "tele/Washing_Machine/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: "V"
+- platform: mqtt
+  name: Washing Machine Current
+  state_topic: "tele/Washing_Machine/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current }}"
+  unit_of_measurement: "A"
+- platform: mqtt
+  name: Washing Machine Power
+  state_topic: "tele/Washing_Machine/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: Washing Machine Energy Today
+  state_topic: "tele/Washing_Machine/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Washing Machine Energy Yesterday
+  state_topic: "tele/Washing_Machine/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Washing Machine Energy Total
+  state_topic: "tele/Washing_Machine/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: "kWh"
+# Sonoff S31 socket for Furnace.
+- platform: mqtt
+  name: Furnace Voltage
+  state_topic: "tele/Furnace/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: "V"
+- platform: mqtt
+  name: Furnace Current
+  state_topic: "tele/Furnace/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current }}"
+  unit_of_measurement: "A"
+- platform: mqtt
+  name: Furnace Power
+  state_topic: "tele/Furnace/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: Furnace Energy Today
+  state_topic: "tele/Furnace/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Furnace Energy Yesterday
+  state_topic: "tele/Furnace/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: Furnace Energy Total
+  state_topic: "tele/Furnace/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: "kWh"

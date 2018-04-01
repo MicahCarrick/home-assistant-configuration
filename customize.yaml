@@ -24,22 +24,75 @@ sensor.downstairs_humidity:
   friendly_name: Humidity
 
 sensor.entertainment_center_energy_today:
+  friendly_name: Entertainment Center
   icon: mdi:television
 
 sensor.entertainment_center_energy_yesterday:
+  friendly_name: Entertainment Center
   icon: mdi:television
 
 sensor.entertainment_center_energy_total:
+  friendly_name: Entertainment Center
   icon: mdi:television
 
 sensor.game_console_energy_today:
+  friendly_name: Game Console
   icon: mdi:playstation
 
 sensor.game_console_energy_yesterday:
+  friendly_name: Game Console
   icon: mdi:playstation
 
 sensor.game_console_energy_total:
+  friendly_name: Game Console
   icon: mdi:playstation
 
+sensor.office_energy_today:
+  friendly_name: Office
+  icon: mdi:desktop-classic
+
+sensor.office_energy_yesterday:
+  friendly_name: Office
+  icon: mdi:desktop-classic
+
+sensor.office_energy_total:
+  friendly_name: Office
+  icon: mdi:desktop-classic
+
+sensor.bedroom_tv_energy_today:
+  friendly_name: Bedroom TV
+  icon: mdi:television
+
+sensor.bedroom_tv_energy_yesterday:
+  friendly_name: Bedroom TV
+  icon: mdi:television
+
+sensor.bedroom_tv_energy_total:
+  friendly_name: Bedroom TV
+  icon: mdi:television
+
+sensor.washing_machine_energy_today:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+
+sensor.washing_machine_energy_yesterday:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+
+sensor.washing_machine_energy_total:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+
+sensor.furnace_energy_today:
+  friendly_name: Furnace
+  icon: mdi:fire
+
+sensor.furnace_energy_yesterday:
+  friendly_name: Furnace
+  icon: mdi:fire
+
+sensor.furnace_energy_total:
+  friendly_name: Furnace
+  icon: mdi:fire
 #switch.entertainment_center:
 #  icon: mdi:power-socket-us
