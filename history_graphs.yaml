@@ -16,7 +16,7 @@ power_graph:
   name: Power
   entities:
     - sensor.entertainment_center_power
-    - sensor.game_console_power
+    - sensor.network_and_gaming_power
     - sensor.office_power
     - sensor.bedroom_tv_power
     - sensor.washing_machine_power

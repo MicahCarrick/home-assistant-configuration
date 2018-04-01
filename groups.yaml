@@ -12,13 +12,12 @@ default_view:
     - group.entertainment_room
     - group.bedroom
     - group.office
-    - group.basement
+    - group.always_on
 kitchen:
   name: Kitchen
   entities:
     - light.kitchen_light
     - light.sink_light
-    - switch.washing_machine
     - vacuum.rosie
 bedroom:
   name: Bedroom
@@ -32,15 +31,16 @@ entertainment_room:
   name: "Entertainment Room"
   entities:
     - switch.entertainment_center
-    - switch.game_console
 office:
   name: "Office"
   entities:
     - switch.office_power_strip
-office:
-  name: "Basement"
+always_on:
+  name: "Utility"
   entities:
+    - switch.washing_machine
     - switch.furnace
+    - switch.network_and_gaming
 climate:
   view: yes
   name: Climate
@@ -57,8 +57,8 @@ climate:
 energy_usage_today:
   name: "Today's Usage"
   entities:
+    - sensor.network_and_gaming_energy_today
     - sensor.entertainment_center_energy_today
-    - sensor.game_console_energy_today
     - sensor.office_energy_today
     - sensor.bedroom_tv_energy_today
     - sensor.washing_machine_energy_today
@@ -66,8 +66,8 @@ energy_usage_today:
 energy_usage_yesterday:
   name: "Yesterday's Usage"
   entities:
+    - sensor.network_and_gaming_energy_yesterday
     - sensor.entertainment_center_energy_yesterday
-    - sensor.game_console_energy_yesterday
     - sensor.office_energy_yesterday
     - sensor.bedroom_tv_energy_yesterday
     - sensor.washing_machine_energy_yesterday
@@ -75,8 +75,8 @@ energy_usage_yesterday:
 energy_usage_total:
   name: "Total Usage"
   entities:
+    - sensor.network_and_gaming_energy_total
     - sensor.entertainment_center_energy_total
-    - sensor.game_console_energy_total
     - sensor.office_energy_total
     - sensor.bedroom_tv_energy_total
     - sensor.washing_machine_energy_total
@@ -86,8 +86,8 @@ energy:
   name: Energy
   icon: mdi:power-plug
   entities:
+    - sensor.network_and_gaming_power
     - sensor.entertainment_center_power
-    - sensor.game_console_power
     - sensor.office_power
     - sensor.bedroom_tv_power
     - sensor.washing_machine_power

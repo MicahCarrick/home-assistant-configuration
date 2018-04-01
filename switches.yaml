@@ -12,7 +12,7 @@
   payload_not_available: "Offline"
   retain: true
 - platform: mqtt
-  name: Game Console
+  name: Network and Gaming
   command_topic: "cmnd/Gaming_And_Media_PC_Socket/POWER"
   state_topic: "stat/Gaming_And_Media_PC_Socket/POWER"
   availability_topic: "tele/Gaming_And_Media_PC_Socket/LWT"

@@ -35,17 +35,17 @@ sensor.entertainment_center_energy_total:
   friendly_name: Entertainment Center
   icon: mdi:television
 
-sensor.game_console_energy_today:
-  friendly_name: Game Console
-  icon: mdi:playstation
+sensor.network_and_gaming_energy_today:
+  friendly_name: Network and Gaming
+  icon: mdi:server
 
-sensor.game_console_energy_yesterday:
-  friendly_name: Game Console
-  icon: mdi:playstation
+sensor.network_and_gaming_energy_yesterday:
+  friendly_name: Network and Gaming
+  icon: mdi:server
 
-sensor.game_console_energy_total:
-  friendly_name: Game Console
-  icon: mdi:playstation
+sensor.network_and_gaming_energy_total:
+  friendly_name: Network and Gaming
+  icon: mdi:server
 
 sensor.office_energy_today:
   friendly_name: Office

@@ -112,6 +112,9 @@ media_player:
 ifttt:
   key: !secret ifttt_key
 
+zwave:
+   usb_path: /dev/ttyACM0
+
 history_graph: !include history_graphs.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
